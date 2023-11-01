@@ -18,6 +18,7 @@ public class RunMatrix {
     //zeroMatrix();
     //printMatrix();
 
+    //testing incrementing list
     int[][] table = new int[size][size];
 
     for (int row = 0; row < table.length; row++)
