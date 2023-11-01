@@ -12,5 +12,23 @@ public class RunMatrix {
     System.out.println();
 
     System.out.println("You matrix is " + size + " x " + size);
+
+    System.out.println();
+
+    //zeroMatrix();
+    //printMatrix();
+
+    int[][] table = new int[size][size];
+
+    for (int row = 0; row < table.length; row++)
+      for (int col = 0; col < table[row].length; col++)
+        table[row][col] = 2*row+col+1;
+
+
+    for (int row = 0; row < table.length; row++){
+      for (int col = 0; col < table[row].length; col++)
+        System.out.print(table[row][col] + "\t");
+        System.out.println();
+    }
   }
 }
