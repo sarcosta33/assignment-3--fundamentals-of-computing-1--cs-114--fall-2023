@@ -10,6 +10,16 @@ public class Matrix {
         table[row][col] = 0;
   }
 
+  public void incrementingMatrix() {
+    for (int row = 0; row < table.length; row++)
+      for (int col = 0; col < table[row].length; col++)
+        table[row][col] = ((row * size) + col) + 1;
+  }
+
+  public void reverseMatrix() {
+
+  }
+
   public void printMatrix() {
     for (int row = 0; row < table.length; row++){
       for (int col = 0; col < table[row].length; col++)

@@ -11,11 +11,16 @@ public class RunMatrix {
 
     System.out.println();
 
-    System.out.println("You matrix is " + size + " x " + size);
+    //try{
+      System.out.println("You matrix is " + size + " x " + size);
 
-    System.out.println();
+      System.out.println();
+    //}
+    //catch(NumberFormatException e){
+      //System.out.println("Entered value, " + size + " is non-integer");
+    //}
 
-    //zeroMatrix();
+    //Matrix newMatrix = new Matrix(size);
     //printMatrix();
 
     //testing incrementing list
@@ -23,8 +28,7 @@ public class RunMatrix {
 
     for (int row = 0; row < table.length; row++)
       for (int col = 0; col < table[row].length; col++)
-        table[row][col] = 2*row+col+1;
-
+        table[row][col] = ((row * size) + col)+1;
 
     for (int row = 0; row < table.length; row++){
       for (int col = 0; col < table[row].length; col++)
