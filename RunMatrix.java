@@ -6,7 +6,7 @@ public class RunMatrix {
     int size = 0;
 
     try{
-      System.out.println("Please enter the size of you matrix: ");
+      System.out.print("Please enter the size of you matrix: ");
       size = Integer.parseInt(System.console().readLine());
 
       // prints new line
@@ -17,30 +17,28 @@ public class RunMatrix {
       System.exit(1);
     }
 
-    // calling methods - FIX FORMATTING
     Matrix newMatrix = new Matrix(size);
 
     System.out.println("Printing matrix with default values: ");
     newMatrix.zeroMatrix();
-    newMatrix.printMatrix();
-    System.out.println();
-
-    newMatrix.populateMatrix();
     newMatrix.printMatrix();
 
     System.out.println();
 
     System.out.println("Populating matrix...matrix populated ");
     System.out.println();
+
     System.out.println("Printing matrix: ");
+    newMatrix.populateMatrix();
+    newMatrix.printMatrix();
 
     System.out.println();
 
-    System.out.println("Flipped matrix.");
+    System.out.println("Flipping matrix...matrix flipped");
+    System.out.println();
+
+    System.out.println("Printing flipped matrix: ");
     newMatrix.flipMatrix();
     newMatrix.printMatrix();
-
-
-
   }
 }
