@@ -3,37 +3,44 @@ import java.util.Scanner;
 public class RunMatrix {
   public static void main(String[] args) {
 
-    int size;
+    int size = 0;
 
-    Scanner scan = new Scanner(System.in);
-    System.out.print("Please enter the size of you matrix: ");
-    size = scan.nextInt();
+    try{
+      System.out.println("Please enter the size of you matrix: ");
+      size = Integer.parseInt(System.console().readLine());
+
+      // prints new line
+      System.out.println();
+    }
+    catch(NumberFormatException e) {
+      System.out.println("Entered value, " + size + " is non-integer");
+      System.exit(1);
+    }
+
+    // calling methods - FIX FORMATTING
+    Matrix newMatrix = new Matrix(size);
+
+    System.out.println("Printing matrix with default values: ");
+    newMatrix.zeroMatrix();
+    newMatrix.printMatrix();
+    System.out.println();
+
+    newMatrix.populateMatrix();
+    newMatrix.printMatrix();
 
     System.out.println();
 
-    //try{
-      System.out.println("You matrix is " + size + " x " + size);
+    System.out.println("Populating matrix...matrix populated ");
+    System.out.println();
+    System.out.println("Printing matrix: ");
 
-      System.out.println();
-    //}
-    //catch(NumberFormatException e){
-      //System.out.println("Entered value, " + size + " is non-integer");
-    //}
+    System.out.println();
 
-    //Matrix newMatrix = new Matrix(size);
-    //printMatrix();
+    System.out.println("Flipped matrix.");
+    newMatrix.flipMatrix();
+    newMatrix.printMatrix();
 
-    //testing incrementing list
-    int[][] table = new int[size][size];
 
-    for (int row = 0; row < table.length; row++)
-      for (int col = 0; col < table[row].length; col++)
-        table[row][col] = ((row * size) + col)+1;
 
-    for (int row = 0; row < table.length; row++){
-      for (int col = 0; col < table[row].length; col++)
-        System.out.print(table[row][col] + "\t");
-        System.out.println();
-    }
   }
 }
