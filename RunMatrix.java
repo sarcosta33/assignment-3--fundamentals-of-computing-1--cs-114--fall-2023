@@ -12,8 +12,8 @@ public class RunMatrix {
       // prints new line
       System.out.println();
     }
-    catch(NumberFormatException e) {
-      System.out.println("Entered value, " + size + " is non-integer");
+    catch(NumberFormatException exception) {
+      System.out.println("Entered value, is non-integer");
       System.exit(1);
     }
 
