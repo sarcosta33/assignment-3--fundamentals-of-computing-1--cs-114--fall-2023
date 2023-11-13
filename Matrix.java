@@ -7,10 +7,7 @@ public class Matrix {
   public Matrix(int size) {
     this.table = new int[size][size];
 
-    System.out.println("You matrix is " + size + " x " + size);
-
-    // prints new line
-    System.out.println();
+    System.out.println("Your matrix is " + size + " x " + size);
   }
 
   private int[][] table;
@@ -54,7 +51,7 @@ public class Matrix {
     int num = table.length;
     for (int row = 0; row < table.length; row++) {
       for (int col = 0; col < table[row].length; col++) {
-        // if in diagnol
+        // highlight number if in diagnol
         if (row+col == num-1) {
           System.out.print("\033[0;33m" + table[row][col] + "\033[0m" + "\t");
         }
